@@ -1,0 +1,131 @@
+.mob-menu,
+.header-btn,
+.open-menu-btn {
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}
+
+.page-header {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.mob-menu__item {
+  margin-bottom: 32px;
+}
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  color: $title-text-color;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.mob-menu__link--current {
+  position: relative;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.current::after {
+    content: '';
+    background-color: var(--accent-color);
+    position: absolute;
+  }
+}
+.mob-contacts__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  text-decoration: none;
+}
+.mob-contacts__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  text-decoration: none;
+}
+.mob-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.open-menu-btn {
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 5;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  .container {
+    padding-left: 0;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+}
+
+.mob-menu-bottom {
+  margin-top: auto;
+}
+
+.close-menu-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.mob-social-list {
+  display: flex;
+  margin-top: 60px;
+}
+.mob-social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  text-decoration: none;
+  margin-right: 20px;
+  position: relative;
+}
+// .mob-social-link::after {
+//   content: '';
+//   position: absolute;
+//   display: block;
+//   width: 22px;
+//   height: 3px;
+
+//   bottom: 10px;
+
+//   transform: rotate(90deg);
+//   background-color: rgba(33, 33, 33, 0.2);
+// }

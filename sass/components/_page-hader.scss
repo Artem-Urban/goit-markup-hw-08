@@ -1,0 +1,11 @@
+.page-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+
+  &_item {
+    background-color: $primary-white-color;
+    display: flex;
+    align-items: center;
+  }
+}
