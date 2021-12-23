@@ -8,13 +8,13 @@
 
 .page-header {
   @media screen and (max-width: 767px) {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
 
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
   }
 }
 .mob-icon {
@@ -34,23 +34,25 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: $icon-accent-color;
-  }
+  // &:hover,
+  // &:focus {
+  //   color: $icon-accent-color;
+  // }
 }
 
 .mob-menu__link--current {
-  position: relative;
+  @media screen and (max-width: 767px) {
+    color: $icon-accent-color;
+    // position: relative;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &.current::after {
-    content: '';
-    background-color: var(--accent-color);
-    position: absolute;
+    // &.current::after {
+    //   content: '';
+    //   color: $icon-accent-color;
+    //   position: absolute;
+    // }
   }
 }
 .mob-contacts__tel {
@@ -75,8 +77,13 @@
 
 .open-menu-btn {
   margin-left: auto;
-  margin-bottom: 10px;
+  margin-top: 10px;
   background-color: $primary-bg-color;
+  border: 0;
+  &:hover,
+  &:focus {
+    color: $icon-accent-color;
+  }
 }
 
 .mob-menu {
@@ -88,6 +95,12 @@
   z-index: 5;
   padding-top: 10px;
   padding-bottom: 48px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  opacity: 1;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16), 0px 2px 4px 0px rgba(0, 0, 0, 0.08),
     0px 4px 8px 0px rgba(0, 0, 0, 0.04);
 
@@ -95,14 +108,9 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.container {
-  @media screen and (max-width: 768px) {
-    padding-left: 40px;
-    display: flex;
-    flex-direction: column;
-
-    height: 100%;
-  }
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .mob-menu-bottom {
