@@ -472,14 +472,6 @@ ul {
   padding-top: 10px;
   padding-bottom: 48px;
   padding-left: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
   opacity: 1;
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16), 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16), 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
@@ -493,13 +485,23 @@ ul {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mob-menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
 .is-hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-.mob-menu-bottom {
-  margin-top: auto;
 }
 
 .close-menu-btn {
@@ -722,7 +724,7 @@ ul {
 
 .hero {
   padding-top: 118px;
-  padding-bottom: 198px;
+  padding-bottom: 118px;
   text-align: center;
   min-width: 480px;
   max-width: 576px;
@@ -1120,8 +1122,8 @@ ul {
   margin-bottom: 30px;
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -1129,6 +1131,8 @@ ul {
 @media screen and (min-width: 1200px) {
   .container__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 }
 
@@ -1211,10 +1215,18 @@ ul {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .subtitle {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
 .text {
   margin-top: 0;
   font-size: 14px;
   line-height: 1.71;
+  color: #757575;
 }
 
 .section--no-padding {
@@ -1334,6 +1346,7 @@ ul {
 @media screen and (min-width: 1200px) {
   .team-list__item:not(:last-child) {
     margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -1369,6 +1382,7 @@ ul {
   font-size: 16px;
   line-height: 1.87;
   text-align: center;
+  color: #757575;
 }
 
 .icon-list {
@@ -1625,7 +1639,6 @@ ul {
 @media screen and (min-width: 768px) {
   .portfolio-list__item {
     width: 354px;
-    margin-bottom: 30px;
   }
 }
 
@@ -1739,6 +1752,7 @@ ul {
   margin-bottom: 0;
   font-size: 16px;
   line-height: 1.87;
+  color: #757575;
 }
 
 @media screen and (min-width: 768px) {
@@ -1847,10 +1861,15 @@ ul {
           flex-direction: column;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .join {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .join {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

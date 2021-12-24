@@ -59,9 +59,11 @@
 .join {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     margin-left: auto;
     margin-right: auto;
+  }
+  @media screen and (max-width: 1199px) {
     align-items: center;
   }
 

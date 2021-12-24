@@ -18,7 +18,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 768px) {
     width: 354px;
-    margin-bottom: 30px;
   }
   @media screen and (min-width: 1200px) {
     width: 370px;
@@ -108,6 +107,7 @@
     margin-bottom: 0;
     font-size: 16px;
     line-height: 1.87;
+    color: $primary-text-color;
   }
 }
 .height {
